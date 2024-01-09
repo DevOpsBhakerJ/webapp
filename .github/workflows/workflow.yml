@@ -1,0 +1,23 @@
+name: PipelineWorkflow
+
+on:
+   push:
+       branches:
+        - master
+   pull_request:
+     branches:
+        - master
+
+
+
+jobs:
+     build:
+        name: Azure Pipeline
+        runs-on: ubuntu-latest
+        steps:
+        - name: Azure Pipeline Actions
+          uses: Azure/Pipelines@v1
+          with:
+           azure-devops-project-url: https://dev.azure.com/devops0791/DevOPs%20Mend%20Project
+           azure-pipeline-name: 'bhakerj.GitPipelineApp'
+           azure-devops-token: ${{ secrests.azure_devops_token }}
