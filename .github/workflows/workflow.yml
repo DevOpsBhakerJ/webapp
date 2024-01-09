@@ -20,4 +20,4 @@ jobs:
           with:
            azure-devops-project-url: https://dev.azure.com/devops0791/DevOPs%20Mend%20Project
            azure-pipeline-name: 'bhakerj.GitPipelineApp'
-           azure-devops-token: ${{ secrests.azure_devops_token }}
+           azure-devops-token: ${{ secrets.azure_devops_token }}
